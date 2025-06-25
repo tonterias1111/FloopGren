@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FloopGreen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e8f5e9 0%, #f4f4f4 100%);
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #388e3c 60%, #4CAF50 100%);
+            color: white;
+            padding: 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(60, 120, 60, 0.08);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 0 8px 0;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 18px;
+            box-shadow: 0 2px 8px rgba(60, 120, 60, 0.10);
+            background: #fff;
+            object-fit: cover;
+        }
+        .slogan {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #e8f5e9;
+            text-shadow: 0 1px 4px #388e3c44;
+        }
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(60, 120, 60, 0.04);
+        }
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: background 0.2s, color 0.2s;
+            border-radius: 0 0 8px 8px;
+            margin: 0 2px;
+        }
+        nav a:hover, nav a.active {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        .container {
+            padding: 32px 24px;
+            max-width: 800px;
+            margin: 32px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(60, 120, 60, 0.10);
+        }
+        h2, h3 {
+            color: #388e3c;
+            margin-bottom: 8px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 6px;
+        }
+        .button {
+            background: linear-gradient(90deg, #388e3c 60%, #4CAF50 100%);
+            color: white;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 6px 8px 0 0;
+            box-shadow: 0 2px 8px #388e3c22;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .button:hover {
+            background: #2e7d32;
+            box-shadow: 0 4px 16px #388e3c33;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 2vw;
+                max-width: 98vw;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo-container">
+        <img src="img/logo-floopgreen.png" alt="FloopGreen" class="logo">
+        <span class="slogan">CONECTAMOS EMPRESAS</span>
+    </div>
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="cuenta.html">CUENTA</a>
+        <a href="ganar-creditos.html">CRÉDITOS</a>
+        <a href="quienes-somos.html">QUIÉNES SOMOS</a>
+    </nav>
+</header>
+    
+    <div class="container">
+        <!-- ...contenido principal existente... -->

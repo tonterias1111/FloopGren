@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Cuenta - FloopGreen</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #e8f5e9 0%, #f4f4f4 100%);
+            color: #333;
+        }
+        header {
+            background: linear-gradient(90deg, #388e3c 60%, #4CAF50 100%);
+            color: white;
+            padding: 0;
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(60, 120, 60, 0.08);
+        }
+        .logo-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 18px 0 8px 0;
+        }
+        .logo {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin-right: 18px;
+            box-shadow: 0 2px 8px rgba(60, 120, 60, 0.10);
+            background: #fff;
+            object-fit: cover;
+        }
+        .slogan {
+            font-size: 1.3rem;
+            font-weight: 600;
+            letter-spacing: 2px;
+            color: #e8f5e9;
+            text-shadow: 0 1px 4px #388e3c44;
+        }
+        nav {
+            background: #333;
+            display: flex;
+            justify-content: center;
+            box-shadow: 0 2px 8px rgba(60, 120, 60, 0.04);
+        }
+        nav a {
+            color: white;
+            text-align: center;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            transition: background 0.2s, color 0.2s;
+            border-radius: 0 0 8px 8px;
+            margin: 0 2px;
+        }
+        nav a:hover, nav a.active {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+        .container {
+            padding: 32px 24px;
+            max-width: 480px;
+            margin: 32px auto;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 4px 24px rgba(60, 120, 60, 0.10);
+        }
+        h2, h3 {
+            color: #388e3c;
+            margin-bottom: 8px;
+        }
+        h2 {
+            font-size: 1.5rem;
+            border-bottom: 2px solid #4CAF50;
+            padding-bottom: 6px;
+        }
+        .profile-section {
+            display: flex;
+            align-items: center;
+            margin-bottom: 24px;
+            background: #f0f8f0;
+            border-radius: 12px;
+            padding: 18px 16px;
+            box-shadow: 0 2px 8px #388e3c11;
+        }
+        .profile-pic {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #e0e0e0 60%, #c8e6c9 100%);
+            margin-right: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 38px;
+            color: #388e3c;
+            box-shadow: 0 2px 8px #388e3c22;
+        }
+        .credits-display {
+            background: linear-gradient(90deg, #e8f5e9 60%, #c8e6c9 100%);
+            padding: 18px 16px;
+            border-radius: 12px;
+            margin-bottom: 24px;
+            box-shadow: 0 2px 8px #388e3c11;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .credits-display h3 {
+            margin: 0 0 6px 0;
+            font-size: 1.1rem;
+        }
+        .credits-amount {
+            font-size: 2rem;
+            font-weight: bold;
+            color: #388e3c;
+        }
+        .actions-list {
+            list-style-type: none;
+            padding: 0;
+            margin-bottom: 24px;
+        }
+        .actions-list li {
+            padding: 12px 0 12px 36px;
+            border-bottom: 1px solid #e0e0e0;
+            position: relative;
+            font-size: 1rem;
+        }
+        .actions-list li:before {
+            content: '';
+            position: absolute;
+            left: 12px;
+            top: 18px;
+            width: 10px;
+            height: 10px;
+            background: #4CAF50;
+            border-radius: 50%;
+            opacity: 0.18;
+        }
+        .button {
+            background: linear-gradient(90deg, #388e3c 60%, #4CAF50 100%);
+            color: white;
+            padding: 10px 22px;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 1rem;
+            font-weight: 500;
+            margin: 6px 8px 0 0;
+            box-shadow: 0 2px 8px #388e3c22;
+            transition: background 0.2s, box-shadow 0.2s;
+        }
+        .button:hover {
+            background: #2e7d32;
+            box-shadow: 0 4px 16px #388e3c33;
+        }
+        .button.red {
+            background: linear-gradient(90deg, #f44336 60%, #e57373 100%);
+        }
+        .button.red:hover {
+            background: #b71c1c;
+        }
+        @media (max-width: 600px) {
+            .container {
+                padding: 12px 2vw;
+                max-width: 98vw;
+            }
+            .profile-section {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 12px 8px;
+            }
+            .credits-display {
+                flex-direction: column;
+                align-items: flex-start;
+                padding: 12px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+    <div class="logo-container">
+        <img src="img/logo-floopgreen.png" alt="FloopGreen" class="logo">
+        <span class="slogan">CONECTAMOS EMPRESAS</span>
+    </div>
+    <nav>
+        <a href="index.html">INICIO</a>
+        <a href="cuenta.html" class="active">CUENTA</a>
+        <a href="ganar-creditos.html">CRÉDITOS</a>
+        <a href="quienes-somos.html">QUIÉNES SOMOS</a>
+    </nav>
+</header>
+    
+    <div class="container">
+        <div class="profile-section">
+            <div class="profile-pic">👤</div>
+            <div>
+                <h2>Mi Perfil</h2>
+                <p><strong>Empresa:</strong> Alarako S.A.</p>
+                <p><strong>Miembro desde:</strong> Enero 2025</p>
+            </div>
+        </div>
+        
+        <div class="credits-display">
+            <div>
+                <h3>Mis Créditos</h3>
+                <span class="credits-amount">1,250 <span style="color: #4CAF50; font-size: 1rem;">créditos</span></span>
+            </div>
+            <a href="ganar-creditos.html" class="button">¿Cómo ganar más?</a>
+        </div>
+        
+        <h3>Mis Acciones Recientes</h3>
+        <ul class="actions-list">
+            <li>✅ Publicaste 200kg de plástico - 15 créditos (Ayer)</li>
+            <li>🔄 Retiraste 500kg de cartón - 25 créditos (05/06/2025)</li>
+            <li>🎤 Asististe al taller de reciclaje - 20 créditos (01/06/2025)</li>
+        </ul>
+        
+        <h3>Configuración</h3>
+        <a href="#" class="button">Editar perfil</a>
+        <a href="#" class="button red">Cerrar sesión</a>
+    </div>
+</body>
+</html>
